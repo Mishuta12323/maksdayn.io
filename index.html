@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кібербезпека</title>
+    <title>Війна в Україні</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-                <li><a href="threats.html">Типи Загроз</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Ласкаво просимо до сайту про кібербезпеку!</h1>
-        <p>Ми надаємо інформацію та ресурси для захисту ваших особистих даних в інтернеті.</p>
-    </main>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide" id="slide1">
+                <h1>Війна в Україні</h1>
+                <p>Історія, події та інформація про конфлікт.</p>
+                <h4>Російське вторгнення в Україну (також російська агресія проти України, російсько-українська війна, в російській пропаганді — «спеціальна воєнна операція», скор. «СВО») — відкритий воєнний напад Російської Федерації (РФ) на Україну, що почався в четвер о 3:40 24 лютого 2022 року.</h4>
+            </div>
+            <div class="slide" id="slide2">
+                <h1>Початок Конфлікту</h1>
+                <p>Відповідно до інформації, конфлікт розпочався...</p>
+                <button onclick="navigateTo('details')">Деталі</button>
+            </div>
+            <div class="slide" id="slide3">
+                <h1>Події 2022 року</h1>
+                <p>Огляд важливих подій...</p>
+                <button onclick="navigateTo('events')">Події</button>
+            </div>
+            <!-- Додати більше слайдів за потреби -->
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
     <footer>
-        <p>&copy; 2024 Кібербезпека. Всі права захищені.</p>
+        <button onclick="navigateTo('contact')">Контакти</button>
+        <button onclick="navigateTo('about')">Про сайт</button>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
