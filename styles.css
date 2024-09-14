@@ -1,73 +1,98 @@
+/* styles.css */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #0f0;
 }
 
-header {
-    background-color: #111;
-    padding: 10px 0;
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #0f0;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero {
-    background: url('images/computers-virus.jpg') no-repeat center center/cover;
-    color: #0f0;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1, .hero p {
-    margin: 0;
-}
-
-.contact-info {
+.slides {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px); /* Adjust for header and footer height */
+    transition: transform 0.5s ease;
+    height: 100%;
 }
 
-.contact-info h1 {
-    color: #0f0;
-    font-size: 48px;
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #a6c8f6, #0033a0); /* синій градієнт */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#slide1 {
+    background-image: url('https://static.ukrinform.com/photos/2022_01/thumb_files/630_360_1642432632-272.jpg');
+}
+
+#slide2 {
+    background: linear-gradient(to bottom, #f9e8a7, #f1c40f); /* жовтий градієнт */
+}
+
+.slide-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #0044cc;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0033a0;
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 footer {
-    background-color: #111;
-    color: #0f0;
+    background-color: #0033a0;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+}
+
+footer button {
+    background-color: #f1c40f;
+    color: #0033a0;
+}
+
+footer button:hover {
+    background-color: #f9e8a7;
 }
